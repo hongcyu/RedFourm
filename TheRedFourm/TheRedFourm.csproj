@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCBE16DE-7628-49BC-BAAB-671E77A03C38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheRedFourm</RootNamespace>
+    <AssemblyName>TheRedFourm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\SQLHelper.cs" />
+    <Compile Include="DB\UserData.cs" />
+    <Compile Include="LoginSystem\RegisterSys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSystem\RegisterSys.Designer.cs">
+      <DependentUpon>RegisterSys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSystem\LoginSys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSystem\LoginSys.Designer.cs">
+      <DependentUpon>LoginSys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainSystem\PersionData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\PersionData.Designer.cs">
+      <DependentUpon>PersionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainSystem\WindowsOfUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSystem\WindowsOfUser.Designer.cs">
+      <DependentUpon>WindowsOfUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostSystem\PublishPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostSystem\PublishPost.Designer.cs">
+      <DependentUpon>PublishPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostSystem\QueryPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostSystem\QueryPost.Designer.cs">
+      <DependentUpon>QueryPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RETEXT\PublishRetext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RETEXT\PublishRetext.Designer.cs">
+      <DependentUpon>PublishRetext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RETEXT\QueryRetext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RETEXT\QueryRetext.Designer.cs">
+      <DependentUpon>QueryRetext.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginSystem\RegisterSys.resx">
+      <DependentUpon>RegisterSys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSystem\LoginSys.resx">
+      <DependentUpon>LoginSys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSystem\PersionData.resx">
+      <DependentUpon>PersionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSystem\WindowsOfUser.resx">
+      <DependentUpon>WindowsOfUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostSystem\PublishPost.resx">
+      <DependentUpon>PublishPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostSystem\QueryPost.resx">
+      <DependentUpon>QueryPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RETEXT\PublishRetext.resx">
+      <DependentUpon>PublishRetext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RETEXT\QueryRetext.resx">
+      <DependentUpon>QueryRetext.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\解春困冲剂   愉快节奏来佐糖_109951163177059665.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006z09Zkgy1fm5xg9dvdfj30m80vg78x.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006z09Zkgy1fm5xg8vukaj30rs161qcp1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006z09Zkgy1fm5xg9p0o7j30m80vgjvx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006z09Zkgy1fm5xgb50ypj30u0140gtx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTB1T_TxQzDpK1RjSZFrq6y78VXah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006z09Zkgy1fm5xg8987rj30m80wzgqr.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
